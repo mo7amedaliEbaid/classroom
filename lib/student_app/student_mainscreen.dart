@@ -1,4 +1,6 @@
-import 'package:classroom/student_screens/messages_screen.dart';
+import 'package:classroom/student_app/calender_screen.dart';
+import 'package:classroom/student_app/classrooms_screen.dart';
+import 'package:classroom/student_app/messages_screen.dart';
 import 'package:classroom/utils/assets.dart';
 import 'package:classroom/utils/components.dart';
 import 'package:classroom/utils/textstyles.dart';
@@ -35,7 +37,7 @@ class StudentMainScreen extends StatelessWidget {
                 ],
               ),
               context,
-              h*.07,
+              h * .07,
               w * .26),
           Container(
             color: Colors.blue,
@@ -77,14 +79,25 @@ class StudentMainScreen extends StatelessWidget {
           )),
           GreyDivider(),
           GestureDetector(
-              onTap: (){
+              onTap: () {
                 NavigateTo(MessagesScreen(), context);
               },
-              child: CommonRow(FontAwesomeIcons.solidMessage, "Messages", h * .08)),
+              child: CommonRow(
+                  FontAwesomeIcons.solidMessage, "Messages", h * .08)),
           GreyDivider(),
-          CommonRow(FontAwesomeIcons.solidCalendarDays, "Calender", h * .08),
+          GestureDetector(
+              onTap: () {
+                NavigateTo(CalenderScreen(), context);
+              },
+              child: CommonRow(
+                  FontAwesomeIcons.solidCalendarDays, "Calender", h * .08)),
           GreyDivider(),
-          CommonRow(FontAwesomeIcons.folderOpen, "Student Report", h * .08),
+          GestureDetector(
+              onTap: () {
+                NavigateTo(AvailabeClassesScreen(), context);
+              },
+              child: CommonRow(
+                  FontAwesomeIcons.folderOpen, "Student Report", h * .08)),
           GreyDivider(),
           CommonRow(FontAwesomeIcons.fileCircleCheck, "Check to Today\'s class",
               h * .08)

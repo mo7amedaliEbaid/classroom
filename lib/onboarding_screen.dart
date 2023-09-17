@@ -1,4 +1,4 @@
-import 'package:classroom/student_screens/student_app.dart';
+import 'package:classroom/student_app/student_app.dart';
 import 'package:classroom/utils/textstyles.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';

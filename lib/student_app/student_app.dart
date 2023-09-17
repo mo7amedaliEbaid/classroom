@@ -1,10 +1,10 @@
 import 'dart:developer';
 
 import 'package:classroom/utils/components.dart';
-import 'package:classroom/student_screens/student_acountscreen.dart';
-import 'package:classroom/student_screens/student_emailscreen.dart';
-import 'package:classroom/student_screens/student_mainscreen.dart';
-import 'package:classroom/student_screens/student_settingsscreen.dart';
+import 'package:classroom/student_app/student_acountscreen.dart';
+import 'package:classroom/student_app/student_emailscreen.dart';
+import 'package:classroom/student_app/student_mainscreen.dart';
+import 'package:classroom/student_app/student_settingsscreen.dart';
 import 'package:classroom/utils/textstyles.dart';
 import 'package:flutter/material.dart';
 

@@ -53,7 +53,7 @@ Widget TopContainer(Widget title, BuildContext context, double h, double w) {
   );
 }
 
-Widget CommonRow(IconData icon, String text, double height) {
+Widget CommonRow(IconData icon, String text, double height, {String tex1=""}) {
   return Container(
     height: height,
     width: double.infinity,
@@ -64,7 +64,7 @@ Widget CommonRow(IconData icon, String text, double height) {
         Row(
           children: [
             w1,
-            Icon(icon, color: Colors.blue),
+            Icon(icon, color: Colors.blue,size: 35,),
             w3,
             Text(
               text,
@@ -72,9 +72,15 @@ Widget CommonRow(IconData icon, String text, double height) {
             ),
           ],
         ),
-        Icon(
-          Icons.arrow_forward_ios,
-          color: Colors.green,
+        Row(
+          children: [
+            Text("${tex1}",style: hb3,),
+            w3,
+            Icon(
+              Icons.arrow_forward_ios,
+              color: Colors.green,
+            ),
+          ],
         ),
       ],
     ),

@@ -154,7 +154,7 @@ class _MessagesScreenState extends State<MessagesScreen> {
                 ),
                 Container(
                   height: h * .05,
-                  width: w * .6,
+                  width: w * .7,
                   decoration: BoxDecoration(
                       border: Border.all(width: 1, color: Colors.black),
                       borderRadius: BorderRadius.circular(5)),
@@ -170,7 +170,19 @@ class _MessagesScreenState extends State<MessagesScreen> {
                         border:
                             UnderlineInputBorder(borderSide: BorderSide.none)),
                   ),
-                )
+                ),
+                GestureDetector(
+                  onTap: (){
+                    setState(() {
+                      text1 = _controller.text.trim().toString();
+                      _controller.clear();
+                    });
+                  },
+                  child: Icon(
+                    FontAwesomeIcons.circleArrowRight,
+                    color: Colors.green,
+                  ),
+                ),
               ],
             ),
           ),
