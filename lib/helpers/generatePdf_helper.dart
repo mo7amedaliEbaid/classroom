@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:syncfusion_flutter_pdf/pdf.dart';
 
-import '../utils/file.dart';
+import 'openPdf_helper.dart';
 
 
 class PDfHelper{

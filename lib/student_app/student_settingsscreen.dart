@@ -1,4 +1,4 @@
-import 'package:classroom/utils/components.dart';
+import 'package:classroom/components.dart';
 import 'package:flutter/material.dart';
 
 import '../utils/spaces.dart';

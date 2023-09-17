@@ -1,5 +1,5 @@
 import 'package:classroom/student_app/studentreport_screen.dart';
-import 'package:classroom/utils/components.dart';
+import 'package:classroom/components.dart';
 import 'package:flutter/material.dart';
 
 import 'models/classroom_model.dart';

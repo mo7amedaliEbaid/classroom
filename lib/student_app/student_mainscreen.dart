@@ -4,7 +4,7 @@ import 'package:classroom/student_app/calender_screen.dart';
 import 'package:classroom/student_app/classrooms_screen.dart';
 import 'package:classroom/student_app/messages_screen.dart';
 import 'package:classroom/utils/assets.dart';
-import 'package:classroom/utils/components.dart';
+import 'package:classroom/components.dart';
 import 'package:classroom/utils/textstyles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';

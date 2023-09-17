@@ -1,6 +1,6 @@
 import 'dart:developer';
 
-import 'package:classroom/utils/components.dart';
+import 'package:classroom/components.dart';
 import 'package:classroom/student_app/student_acountscreen.dart';
 import 'package:classroom/student_app/student_emailscreen.dart';
 import 'package:classroom/student_app/student_mainscreen.dart';

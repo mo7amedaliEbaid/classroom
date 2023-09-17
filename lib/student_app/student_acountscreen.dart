@@ -1,5 +1,5 @@
 import 'package:classroom/utils/assets.dart';
-import 'package:classroom/utils/components.dart';
+import 'package:classroom/components.dart';
 import 'package:classroom/utils/textstyles.dart';
 import 'package:flutter/material.dart';
 

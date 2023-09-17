@@ -1,9 +1,9 @@
 import 'dart:io';
 import 'dart:typed_data';
 
-import 'package:classroom/student_app/pdf_helper.dart';
+import 'package:classroom/helpers/generatePdf_helper.dart';
 import 'package:classroom/utils/assets.dart';
-import 'package:classroom/utils/components.dart';
+import 'package:classroom/components.dart';
 import 'package:classroom/utils/textstyles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';

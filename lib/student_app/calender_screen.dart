@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 
-import '../utils/calendar.dart';
+import '../helpers/calendar_helper.dart';
 
 
 class CalenderScreen extends StatefulWidget {
