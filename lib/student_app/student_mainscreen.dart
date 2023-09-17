@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:classroom/student_app/calender_screen.dart';
 import 'package:classroom/student_app/classrooms_screen.dart';
 import 'package:classroom/student_app/messages_screen.dart';
@@ -5,14 +7,43 @@ import 'package:classroom/utils/assets.dart';
 import 'package:classroom/utils/components.dart';
 import 'package:classroom/utils/textstyles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
 
 import '../utils/colors.dart';
 import '../utils/spaces.dart';
 
-class StudentMainScreen extends StatelessWidget {
+class StudentMainScreen extends StatefulWidget {
   const StudentMainScreen({super.key});
 
+  @override
+  State<StudentMainScreen> createState() => _StudentMainScreenState();
+}
+
+class _StudentMainScreenState extends State<StudentMainScreen> {
+  String _scanBarcode = 'Unknown';
+  Future<void> scanBarcodeNormal() async {
+    String barcodeScanRes;
+    // Platform messages may fail, so we use a try/catch PlatformException.
+    try {
+      barcodeScanRes = await FlutterBarcodeScanner.scanBarcode(
+          '#ff6666', 'Cancel', true, ScanMode.BARCODE);
+      print(barcodeScanRes);
+    } on PlatformException {
+      barcodeScanRes = 'Failed to get platform version.';
+    }
+
+    // If the widget was removed from the tree while the asynchronous platform
+    // message was in flight, we want to discard the reply rather than calling
+    // setState to update our non-existent appearance.
+    if (!mounted) return;
+
+    setState(() {
+      _scanBarcode = barcodeScanRes;
+    });
+    log(_scanBarcode);
+  }
   @override
   Widget build(BuildContext context) {
     double h = MediaQuery.sizeOf(context).height;
@@ -69,7 +100,7 @@ class StudentMainScreen extends StatelessWidget {
               ),
               Positioned(
                   bottom: 10,
-                  right: 50,
+                  right: 30,
                   child: Icon(
                     FontAwesomeIcons.camera,
                     color: Colors.white,
@@ -83,24 +114,37 @@ class StudentMainScreen extends StatelessWidget {
                 NavigateTo(MessagesScreen(), context);
               },
               child: CommonRow(
-                  FontAwesomeIcons.solidMessage, "Messages", h * .08)),
+                  FontAwesomeIcons.solidMessage, "Messages", h * .06)),
           GreyDivider(),
           GestureDetector(
               onTap: () {
                 NavigateTo(CalenderScreen(), context);
               },
               child: CommonRow(
-                  FontAwesomeIcons.solidCalendarDays, "Calender", h * .08)),
+                  FontAwesomeIcons.solidCalendarDays, "Calender", h * .06)),
           GreyDivider(),
           GestureDetector(
               onTap: () {
                 NavigateTo(AvailabeClassesScreen(), context);
               },
               child: CommonRow(
-                  FontAwesomeIcons.folderOpen, "Student Report", h * .08)),
+                  FontAwesomeIcons.folderOpen, "Student Report", h * .06)),
           GreyDivider(),
-          CommonRow(FontAwesomeIcons.fileCircleCheck, "Check to Today\'s class",
-              h * .08)
+          GestureDetector(
+            onTap: () =>scanBarcodeNormal(),
+            child: CommonRow(FontAwesomeIcons.fileCircleCheck,
+                "Check to Today\'s class", h * .06),
+          ),
+          GreyDivider(),
+          Row(
+            children: [
+              InkWell(
+                child: Column(children: [
+                  Icon(FontAwesomeIcons.moneyBillWheat)
+                ],),
+              )
+            ],
+          )
         ],
       ),
     ));

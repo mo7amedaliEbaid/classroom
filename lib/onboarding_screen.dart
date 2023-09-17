@@ -39,9 +39,10 @@ class OnBoardingScreen extends StatelessWidget {
                 ],
               ),
             ),
-            GreyContainer("Use our app as", h * .06, hb_white),
+            GreyContainer("Use our app as", h * .06, hb_blue),
             GestureDetector(
               onTap: () {
+                CommonSacafoldMessenger(context, "Welcome as a Student");
                 NavigateTo(StudentApp(), context);
               },
               child: CommonRow(

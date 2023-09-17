@@ -53,7 +53,8 @@ Widget TopContainer(Widget title, BuildContext context, double h, double w) {
   );
 }
 
-Widget CommonRow(IconData icon, String text, double height, {String tex1=""}) {
+Widget CommonRow(IconData icon, String text, double height,
+    {String tex1 = "", bool isgrades = false, String grade = ""}) {
   return Container(
     height: height,
     width: double.infinity,
@@ -64,7 +65,11 @@ Widget CommonRow(IconData icon, String text, double height, {String tex1=""}) {
         Row(
           children: [
             w1,
-            Icon(icon, color: Colors.blue,size: 35,),
+            Icon(
+              icon,
+              color: Colors.blue,
+              size: 35,
+            ),
             w3,
             Text(
               text,
@@ -74,8 +79,18 @@ Widget CommonRow(IconData icon, String text, double height, {String tex1=""}) {
         ),
         Row(
           children: [
-            Text("${tex1}",style: hb3,),
+            Text(
+              "${tex1}",
+              style: hb3,
+            ),
             w3,
+            isgrades?
+                Container(
+                  height: 35,
+                  width: 35,
+                  decoration: BoxDecoration(shape: BoxShape.circle,color: Colors.green),
+                  child: Center(child: Text(grade,style: hn3_white,),),
+                ):
             Icon(
               Icons.arrow_forward_ios,
               color: Colors.green,
