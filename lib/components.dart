@@ -84,17 +84,23 @@ Widget CommonRow(IconData icon, String text, double height,
               style: hb3,
             ),
             w3,
-            isgrades?
-                Container(
-                  height: 35,
-                  width: 35,
-                  decoration: BoxDecoration(shape: BoxShape.circle,color: Colors.green),
-                  child: Center(child: Text(grade,style: hn3_white,),),
-                ):
-            Icon(
-              Icons.arrow_forward_ios,
-              color: Colors.green,
-            ),
+            isgrades
+                ? Container(
+                    height: 35,
+                    width: 35,
+                    decoration: BoxDecoration(
+                        shape: BoxShape.circle, color: Colors.green),
+                    child: Center(
+                      child: Text(
+                        grade,
+                        style: hn3_white,
+                      ),
+                    ),
+                  )
+                : Icon(
+                    Icons.arrow_forward_ios,
+                    color: Colors.green,
+                  ),
           ],
         ),
       ],
@@ -196,24 +202,79 @@ Widget WhiteTextContainer(String text, TextStyle? style) {
   );
 }
 
-Widget HelpContainer(double h) {
+Widget BottomBar(double h) {
+  return Container(
+    height: h,
+    color: Colors.blue,
+    child: Center(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(
+                Icons.payments,
+                color: Colors.white,
+                size: 40,
+              ),
+              Text(
+                "Payment",
+                style: hn2_white,
+              )
+            ],
+          ),
+          w1,
+          w1,
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(
+                FontAwesomeIcons.mapLocation,
+                color: Colors.white,
+              ),
+              Text(
+                "Map",
+                style: hn2_white,
+              )
+            ],
+          ),
+          w1,
+          w1,
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(
+                Icons.question_mark,
+                color: Colors.white,
+                size: 40,
+              ),
+              Text(
+                "Help",
+                style: hn2_white,
+              )
+            ],
+          ),
+        ],
+      ),
+    ),
+  );
+}
+
+Widget SingleIconBottomBar(double h, IconData iconData, String label) {
   return Container(
     height: h,
     color: Colors.blue,
     child: Center(
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Icon(
-            Icons.question_mark,
-            color: Colors.white,
-          ),
-          Text(
-            "Help",
-            style: hn2_white,
-          )
-        ],
-      ),
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center, children: [
+        Icon(iconData,color: Colors.white,size: 30,),
+        Text(
+          label,
+          style: hb_white,
+        )
+      ]),
     ),
   );
 }

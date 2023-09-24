@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:classroom/student_app/calender_screen.dart';
 import 'package:classroom/student_app/classrooms_screen.dart';
 import 'package:classroom/student_app/messages_screen.dart';
+import 'package:classroom/student_app/student_profilescreen.dart';
 import 'package:classroom/utils/assets.dart';
 import 'package:classroom/components.dart';
 import 'package:classroom/utils/textstyles.dart';
@@ -60,7 +61,6 @@ class _StudentMainScreenState extends State<StudentMainScreen> {
                     "Mohamed Ali",
                     style: hb3,
                   ),
-                  h4,
                   Text(
                     "Welcome",
                     style: hb3,
@@ -91,23 +91,28 @@ class _StudentMainScreenState extends State<StudentMainScreen> {
             ),
           ),
           h2,
-          Center(
-              child: Stack(
-            children: [
-              CircleAvatar(
-                foregroundImage: AssetImage(profileimage),
-                radius: 80,
-              ),
-              Positioned(
-                  bottom: 10,
-                  right: 30,
-                  child: Icon(
-                    FontAwesomeIcons.camera,
-                    color: Colors.white,
-                    size: 35,
-                  ))
-            ],
-          )),
+          GestureDetector(
+            onTap: (){
+              NavigateTo(StudentProfileScreen(), context);
+            },
+            child: Center(
+                child: Stack(
+              children: [
+                CircleAvatar(
+                  foregroundImage: AssetImage(profileimage),
+                  radius: 80,
+                ),
+                Positioned(
+                    bottom: 10,
+                    right: 30,
+                    child: Icon(
+                      FontAwesomeIcons.camera,
+                      color: Colors.white,
+                      size: 35,
+                    ))
+              ],
+            )),
+          ),
           GreyDivider(),
           GestureDetector(
               onTap: () {
@@ -135,16 +140,7 @@ class _StudentMainScreenState extends State<StudentMainScreen> {
             child: CommonRow(FontAwesomeIcons.fileCircleCheck,
                 "Check to Today\'s class", h * .06),
           ),
-          GreyDivider(),
-          Row(
-            children: [
-              InkWell(
-                child: Column(children: [
-                  Icon(FontAwesomeIcons.moneyBillWheat)
-                ],),
-              )
-            ],
-          )
+
         ],
       ),
     ));

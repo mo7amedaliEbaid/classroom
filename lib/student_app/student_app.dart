@@ -26,7 +26,7 @@ class _StudentAppState extends State<StudentApp> {
     double h = MediaQuery.sizeOf(context).height;
     return Scaffold(
       bottomNavigationBar: Container(
-        height: h * .14,
+        height: h * .15,
         width: double.infinity,
         color: Colors.blue,
         child: Center(

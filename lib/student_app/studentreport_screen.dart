@@ -70,10 +70,11 @@ class StudentReport extends StatelessWidget {
       controller: screenshotController,
       child: Scaffold(
         floatingActionButtonLocation: FloatingActionButtonLocation.endTop,
+
         floatingActionButton: SpeedDial(
           direction: SpeedDialDirection.down,
           animatedIcon: AnimatedIcons.menu_close,
-          backgroundColor: Colors.green[900],
+          backgroundColor: deepgreen,
           overlayColor: Colors.black.withOpacity(0.04),
           spacing: 4,
           spaceBetweenChildren: 12,
@@ -116,17 +117,19 @@ class StudentReport extends StatelessWidget {
           decoration: BoxDecoration(
             color: Colors.blue,
           ),
-          child: ListView.builder(
-            itemCount: 5,
-            scrollDirection: Axis.horizontal,
-            physics: NeverScrollableScrollPhysics(),
-            itemBuilder: (context, index) {
-              return Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 5.0, vertical: 5),
-                child: _rowItem(_icons[index], _labels[index]),
-              );
-            },
+          child: Center(
+            child: ListView.builder(
+              itemCount: 5,
+              scrollDirection: Axis.horizontal,
+              physics: NeverScrollableScrollPhysics(),
+              itemBuilder: (context, index) {
+                return Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 10.0, vertical: 5),
+                  child: _rowItem(_icons[index], _labels[index]),
+                );
+              },
+            ),
           ),
         ),
         body: WillPopScope(
