@@ -63,6 +63,8 @@ class OnBoardingScreen extends StatelessWidget {
             GestureDetector(
               onTap: (){
                 NavigateTo(TeacherApp(), context);
+                CommonSacafoldMessenger(context, "Welcome as a Teacher");
+
               },
               child: CommonRow(
                 FontAwesomeIcons.person,

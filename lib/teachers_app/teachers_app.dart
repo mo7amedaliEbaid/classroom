@@ -31,7 +31,7 @@ class _TeacherAppState extends State<TeacherApp> {
         child: Center(
           child: Column(
             children: [
-              GreyContainer("Student 6.5", h*.03,null),
+              GreyContainer("Teacher 6.5", h*.03,null),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

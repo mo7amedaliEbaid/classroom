@@ -6,6 +6,7 @@ import 'package:classroom/student_app/classrooms_screen.dart';
 import 'package:classroom/common_screens/messages_screen.dart';
 import 'package:classroom/student_app/student_profilescreen.dart';
 import 'package:classroom/teachers_app/allstudents_screen.dart';
+import 'package:classroom/teachers_app/attendence_screen.dart';
 import 'package:classroom/utils/assets.dart';
 import 'package:classroom/components.dart';
 import 'package:classroom/utils/textstyles.dart';
@@ -85,7 +86,8 @@ class _TeachersMainScreenState extends State<TeachersMainScreen> {
               onTap: () {
                 NavigateTo(
                     AllStudentsScreen(
-                        destination: Scaffold(body: AccountScreen(accountType: "Student"))),
+                        destination: Scaffold(
+                            body: AccountScreen(accountType: "Student"))),
                     context);
               },
               child:
@@ -100,7 +102,7 @@ class _TeachersMainScreenState extends State<TeachersMainScreen> {
           GreyDivider(),
           GestureDetector(
               onTap: () {
-                NavigateTo(AvailabeClassesScreen(), context);
+                NavigateTo(AttendenceScreen(), context);
               },
               child: CommonRow(
                   FontAwesomeIcons.fileCircleCheck, "Attendence", h * .06)),
