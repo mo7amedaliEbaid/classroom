@@ -3,7 +3,7 @@ import 'dart:developer';
 import 'package:classroom/components.dart';
 import 'package:classroom/student_app/student_emailscreen.dart';
 import 'package:classroom/student_app/student_settingsscreen.dart';
-import 'package:classroom/account_screen.dart';
+import 'package:classroom/common_screens/account_screen.dart';
 import 'package:classroom/teachers_app/teachers_mainscreen.dart';
 import 'package:classroom/utils/textstyles.dart';
 import 'package:flutter/material.dart';

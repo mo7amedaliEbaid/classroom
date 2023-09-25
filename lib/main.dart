@@ -2,7 +2,7 @@ import 'package:classroom/paymob/shared/network/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:intl/date_symbol_data_local.dart';
-import 'onboarding_screen.dart';
+import 'common_screens/onboarding_screen.dart';
 
 void main() async {
   await WidgetsFlutterBinding.ensureInitialized();

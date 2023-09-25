@@ -3,8 +3,8 @@ import 'package:classroom/components.dart';
 import 'package:classroom/utils/textstyles.dart';
 import 'package:flutter/material.dart';
 
-import 'utils/colors.dart';
-import 'utils/spaces.dart';
+import '../utils/colors.dart';
+import '../utils/spaces.dart';
 
 class AccountScreen extends StatelessWidget {
   const AccountScreen({super.key, required this.accountType});

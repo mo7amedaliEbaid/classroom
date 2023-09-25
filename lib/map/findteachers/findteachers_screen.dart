@@ -2,6 +2,8 @@ import 'dart:async';
 import 'dart:typed_data';
 import 'dart:ui';
 
+import 'package:classroom/utils/assets.dart';
+import 'package:classroom/utils/textstyles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -29,44 +31,44 @@ class _FindTeachersScreenState extends State<FindTeachersScreen> {
     {
       "name": "Mr.Ahmed",
       "position": const LatLng(31.0425, 30.4728),
-      "marker": 'assets/markers/marker-1.png',
-      "image": 'assets/avatars/avatar-1.png',
+      "marker": marker1,
+      "image": avatar1,
     },
     {
       "name": "Mrs.Sara",
       "position": const LatLng(31.05, 30.48),
-      "marker": 'assets/markers/marker-2.png',
-      "image": 'assets/avatars/avatar-2.png',
+      "marker": marker2,
+      "image": avatar2,
     },
     {
       "name": "Mr.Khaled",
       "position": const LatLng(31.1425, 30.5728),
-      "marker": 'assets/markers/marker-3.png',
-      "image": 'assets/avatars/avatar-3.png',
+      "marker": marker3,
+      "image": avatar3,
     },
     {
       "name": "Mrs.Soad",
       "position": const LatLng(31.0525, 30.4628),
-      "marker": 'assets/markers/marker-4.png',
-      "image": 'assets/avatars/avatar-4.png',
+      "marker": marker4,
+      "image": avatar4,
     },
     {
       "name": "Mr.Ayman",
       "position": const LatLng(31.7425, 30.5728),
-      "marker": 'assets/markers/marker-5.png',
-      "image": 'assets/avatars/avatar-5.png',
+      "marker": marker5,
+      "image": avatar5,
     },
     {
       "name": "Mrs.Hend",
       "position": const LatLng(31.2425, 30.0728),
-      "marker": 'assets/markers/marker-6.png',
-      "image": 'assets/avatars/avatar-6.png',
+      "marker": marker6,
+      "image": avatar6,
     },
     {
       "name": "Mr.Saad",
       "position": const LatLng(31.3425, 30.7728),
-      "marker": 'assets/markers/marker-7.png',
-      "image": 'assets/avatars/avatar-7.png',
+      "marker": marker7,
+      "image": avatar7,
     },
   ];
 
@@ -78,7 +80,8 @@ class _FindTeachersScreenState extends State<FindTeachersScreen> {
   @override
   Widget build(BuildContext context) {
     createMarkers(context);
-
+    double h=MediaQuery.sizeOf(context).height;
+    double w=MediaQuery.sizeOf(context).width;
     return Scaffold(
         body: Stack(
           children: [
@@ -96,7 +99,7 @@ class _FindTeachersScreenState extends State<FindTeachersScreen> {
               left: 20,
               right: 20,
               child: Container(
-                  width: MediaQuery.of(context).size.width,
+                  width: w,
                   height: 120,
                   decoration: BoxDecoration(
                       color: Colors.white,
@@ -119,7 +122,7 @@ class _FindTeachersScreenState extends State<FindTeachersScreen> {
                             children: [
                               Image.asset(_contacts[index]['image'], width: 60,),
                               const SizedBox(height: 10,),
-                              Text(_contacts[index]["name"], style: const TextStyle(color: Colors.black, fontWeight: FontWeight.w600),)
+                              Text(_contacts[index]["name"], style: hb2,)
                             ],
                           ),
                         ),

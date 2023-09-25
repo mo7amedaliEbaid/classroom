@@ -7,7 +7,7 @@ import 'package:classroom/student_app/student_settingsscreen.dart';
 import 'package:classroom/utils/textstyles.dart';
 import 'package:flutter/material.dart';
 
-import '../account_screen.dart';
+import '../common_screens/account_screen.dart';
 import '../utils/spaces.dart';
 
 class StudentApp extends StatefulWidget {

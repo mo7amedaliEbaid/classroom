@@ -111,6 +111,8 @@ Widget CommonRow(IconData icon, String text, double height,
   );
 }
 
+
+
 Widget GreyDivider() {
   return Divider(
     color: Colors.grey.shade800,
@@ -205,7 +207,7 @@ Widget WhiteTextContainer(String text, TextStyle? style) {
   );
 }
 
-Widget BottomBar(double h,BuildContext context) {
+Widget BottomBar(double h, BuildContext context) {
   return Container(
     height: h,
     color: Colors.blue,
@@ -214,7 +216,7 @@ Widget BottomBar(double h,BuildContext context) {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           GestureDetector(
-            onTap: (){
+            onTap: () {
               NavigateTo(RegisterScreen(), context);
             },
             child: Column(
@@ -235,7 +237,7 @@ Widget BottomBar(double h,BuildContext context) {
           w1,
           w1,
           GestureDetector(
-            onTap: (){
+            onTap: () {
               NavigateTo(FindTeachersScreen(), context);
             },
             child: Column(
@@ -281,13 +283,18 @@ Widget SingleIconBottomBar(double h, IconData iconData, String label) {
     child: Center(
       child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center, children: [
-        Icon(iconData,color: Colors.white,size: 30,),
-        Text(
-          label,
-          style: hb_white,
-        )
-      ]),
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(
+              iconData,
+              color: Colors.white,
+              size: 30,
+            ),
+            Text(
+              label,
+              style: hb_white,
+            )
+          ]),
     ),
   );
 }
