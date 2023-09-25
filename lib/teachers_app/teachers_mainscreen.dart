@@ -15,14 +15,14 @@ import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
 import '../utils/colors.dart';
 import '../utils/spaces.dart';
 
-class StudentMainScreen extends StatefulWidget {
-  const StudentMainScreen({super.key});
+class TeachersMainScreen extends StatefulWidget {
+  const TeachersMainScreen({super.key});
 
   @override
-  State<StudentMainScreen> createState() => _StudentMainScreenState();
+  State<TeachersMainScreen> createState() => _TeachersMainScreenState();
 }
 
-class _StudentMainScreenState extends State<StudentMainScreen> {
+class _TeachersMainScreenState extends State<TeachersMainScreen> {
 
   Widget build(BuildContext context) {
     double h = MediaQuery.sizeOf(context).height;
@@ -70,34 +70,18 @@ class _StudentMainScreenState extends State<StudentMainScreen> {
               ),
               h2,
               GestureDetector(
-                onTap: (){
-                  NavigateTo(StudentProfileScreen(), context);
-                },
-                child: Center(
-                    child: Stack(
-                      children: [
-                        CircleAvatar(
-                          foregroundImage: AssetImage(profileimage),
-                          radius: 80,
-                        ),
-                        Positioned(
-                            bottom: 10,
-                            right: 30,
-                            child: Icon(
-                              FontAwesomeIcons.camera,
-                              color: Colors.white,
-                              size: 35,
-                            ))
-                      ],
-                    )),
-              ),
+                  onTap: () {
+                    NavigateTo(MessagesScreen(), context);
+                  },
+                  child: CommonRow(
+                      FontAwesomeIcons.solidMessage, "Messages", h * .06)),
               GreyDivider(),
               GestureDetector(
                   onTap: () {
                     NavigateTo(MessagesScreen(), context);
                   },
                   child: CommonRow(
-                      FontAwesomeIcons.solidMessage, "Messages", h * .06)),
+                      FontAwesomeIcons.peopleGroup, "Students", h * .06)),
               GreyDivider(),
               GestureDetector(
                   onTap: () {
@@ -111,12 +95,24 @@ class _StudentMainScreenState extends State<StudentMainScreen> {
                     NavigateTo(AvailabeClassesScreen(), context);
                   },
                   child: CommonRow(
-                      FontAwesomeIcons.folderOpen, "Student Report", h * .06)),
+                      FontAwesomeIcons.fileCircleCheck, "Attendence", h * .06)),
               GreyDivider(),
               GestureDetector(
                 onTap: () {},
-                child: CommonRow(FontAwesomeIcons.fileCircleCheck,
-                    "Check to Today\'s class", h * .06),
+                child: CommonRow(FontAwesomeIcons.personMilitaryPointing,
+                    "Behavior Points", h * .06),
+              ),
+              GreyDivider(),
+              GestureDetector(
+                onTap: () {},
+                child: CommonRow(FontAwesomeIcons.graduationCap,
+                    "Grading", h * .06),
+              ),
+              GreyDivider(),
+              GestureDetector(
+                onTap: () {},
+                child: CommonRow(FontAwesomeIcons.folderOpen,
+                    "Student Report", h * .06),
               ),
 
             ],

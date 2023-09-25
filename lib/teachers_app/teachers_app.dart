@@ -2,22 +2,22 @@ import 'dart:developer';
 
 import 'package:classroom/components.dart';
 import 'package:classroom/student_app/student_emailscreen.dart';
-import 'package:classroom/student_app/student_mainscreen.dart';
 import 'package:classroom/student_app/student_settingsscreen.dart';
+import 'package:classroom/account_screen.dart';
+import 'package:classroom/teachers_app/teachers_mainscreen.dart';
 import 'package:classroom/utils/textstyles.dart';
 import 'package:flutter/material.dart';
 
-import '../account_screen.dart';
 import '../utils/spaces.dart';
 
-class StudentApp extends StatefulWidget {
-  const StudentApp({super.key});
+class TeacherApp extends StatefulWidget {
+  const TeacherApp({super.key});
 
   @override
-  State<StudentApp> createState() => _StudentAppState();
+  State<TeacherApp> createState() => _TeacherAppState();
 }
 
-class _StudentAppState extends State<StudentApp> {
+class _TeacherAppState extends State<TeacherApp> {
   int index = 0;
 
   @override
@@ -145,12 +145,12 @@ class _StudentAppState extends State<StudentApp> {
         ),
       ),
       body: index == 0
-          ? StudentMainScreen()
+          ? TeachersMainScreen()
           : index == 1
-              ? AccountScreen(accountType: 'Student',)
-              : index == 2
-                  ? StudentSettingScreen()
-                  : StudentEmailScreen(),
+          ? AccountScreen(accountType: 'Teacher',)
+          : index == 2
+          ? StudentSettingScreen()
+          : StudentEmailScreen(),
     );
   }
 }

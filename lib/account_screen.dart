@@ -3,12 +3,12 @@ import 'package:classroom/components.dart';
 import 'package:classroom/utils/textstyles.dart';
 import 'package:flutter/material.dart';
 
-import '../utils/colors.dart';
-import '../utils/spaces.dart';
+import 'utils/colors.dart';
+import 'utils/spaces.dart';
 
-class StudentAccountScreen extends StatelessWidget {
-  const StudentAccountScreen({super.key});
-
+class AccountScreen extends StatelessWidget {
+  const AccountScreen({super.key, required this.accountType});
+final String accountType;
   @override
   Widget build(BuildContext context) {
     double h = MediaQuery.sizeOf(context).height;
@@ -37,7 +37,7 @@ class StudentAccountScreen extends StatelessWidget {
           h1,
           ProfileContainer("Email", "mo7amedaliebaid@gmail.com", h, w * .6),
           h1,
-          ProfileContainer("Account Type", "Student", h, w * .6),
+          ProfileContainer("Account Type", accountType, h, w * .6),
           SizedBox(height: h*.08,),
           GreenButton("Change email", h*.06,w*.7),
           h2,

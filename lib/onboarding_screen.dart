@@ -1,4 +1,6 @@
 import 'package:classroom/student_app/student_app.dart';
+import 'package:classroom/teachers_app/teachers_app.dart';
+import 'package:classroom/teachers_app/teachers_mainscreen.dart';
 import 'package:classroom/utils/textstyles.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -58,10 +60,15 @@ class OnBoardingScreen extends StatelessWidget {
                   FontAwesomeIcons.peopleGroup, "Guardian / Parent", h * .07),
             ),
             GreyDivider(),
-            CommonRow(
-              FontAwesomeIcons.person,
-              "Teacher",
-              h * .07,
+            GestureDetector(
+              onTap: (){
+                NavigateTo(TeacherApp(), context);
+              },
+              child: CommonRow(
+                FontAwesomeIcons.person,
+                "Teacher",
+                h * .07,
+              ),
             ),
             GreyDivider(),
             CommonRow(
