@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:classroom/map/find/find.dart';
 import 'package:classroom/paymob/modules/register/register.dart';
 import 'package:classroom/utils/colors.dart';
 import 'package:classroom/utils/spaces.dart';
@@ -232,18 +233,23 @@ Widget BottomBar(double h,BuildContext context) {
           ),
           w1,
           w1,
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Icon(
-                FontAwesomeIcons.mapLocation,
-                color: Colors.white,
-              ),
-              Text(
-                "Map",
-                style: hn2_white,
-              )
-            ],
+          GestureDetector(
+            onTap: (){
+              NavigateTo(FindTeachersScreen(), context);
+            },
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  FontAwesomeIcons.mapLocation,
+                  color: Colors.white,
+                ),
+                Text(
+                  "Map",
+                  style: hn2_white,
+                )
+              ],
+            ),
           ),
           w1,
           w1,

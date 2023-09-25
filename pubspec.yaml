@@ -28,6 +28,7 @@ dependencies:
   bloc:
   flutter_bloc:
   webviewx: ^0.2.2
+  google_maps_flutter:
 
 dev_dependencies:
   flutter_test:
@@ -44,6 +45,8 @@ flutter:
   assets:
     - assets/lotties/
     - assets/images/
+    - assets/avatars/
+    - assets/markers/
 
 
 
