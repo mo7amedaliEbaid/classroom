@@ -83,7 +83,7 @@ class ToggleScreen extends StatelessWidget {
                           height: 7,
                         ),
                         Text(
-                          'Payment With Card',
+                          'Payment Ref Code',
                           style: TextStyle(
                               fontSize: 16,
                             fontWeight: FontWeight.bold,

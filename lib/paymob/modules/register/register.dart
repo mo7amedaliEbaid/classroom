@@ -136,6 +136,7 @@ class RegisterScreen extends StatelessWidget {
                                   emailController.text,
                                   phoneController.text);
                             }
+                            NavigateTo(ToggleScreen(), context);
                           },
                           text: "Go To Pay",
                           radius: 12,

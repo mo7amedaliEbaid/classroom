@@ -1,12 +1,13 @@
 import 'dart:developer';
 
-import 'package:classroom/map/find/find.dart';
 import 'package:classroom/paymob/modules/register/register.dart';
 import 'package:classroom/utils/colors.dart';
 import 'package:classroom/utils/spaces.dart';
 import 'package:classroom/utils/textstyles.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import 'map/findteachers/findteachers_screen.dart';
 
 NavigateTo(Widget Screen, BuildContext context) {
   log("nav func invoked");

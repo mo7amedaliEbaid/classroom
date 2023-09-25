@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
-import '../map_style.dart';
+import '../models/map_style.dart';
 
 
 class FindTeachersScreen extends StatefulWidget {
