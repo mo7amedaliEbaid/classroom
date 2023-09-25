@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:classroom/paymob/modules/register/register.dart';
 import 'package:classroom/utils/colors.dart';
 import 'package:classroom/utils/spaces.dart';
 import 'package:classroom/utils/textstyles.dart';
@@ -202,7 +203,7 @@ Widget WhiteTextContainer(String text, TextStyle? style) {
   );
 }
 
-Widget BottomBar(double h) {
+Widget BottomBar(double h,BuildContext context) {
   return Container(
     height: h,
     color: Colors.blue,
@@ -210,19 +211,24 @@ Widget BottomBar(double h) {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Icon(
-                Icons.payments,
-                color: Colors.white,
-                size: 40,
-              ),
-              Text(
-                "Payment",
-                style: hn2_white,
-              )
-            ],
+          GestureDetector(
+            onTap: (){
+              NavigateTo(RegisterScreen(), context);
+            },
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  Icons.payments,
+                  color: Colors.white,
+                  size: 40,
+                ),
+                Text(
+                  "Payment",
+                  style: hn2_white,
+                )
+              ],
+            ),
           ),
           w1,
           w1,

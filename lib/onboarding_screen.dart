@@ -15,7 +15,7 @@ class OnBoardingScreen extends StatelessWidget {
     double h = MediaQuery.sizeOf(context).height;
     double w = MediaQuery.sizeOf(context).width;
     return Scaffold(
-      bottomNavigationBar: BottomBar(h * .095),
+      bottomNavigationBar: BottomBar(h * .095,context),
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

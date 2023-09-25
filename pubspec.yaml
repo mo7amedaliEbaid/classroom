@@ -24,6 +24,10 @@ dependencies:
   screenshot:
   share_plus:
   flutter_speed_dial:
+  dio:
+  bloc:
+  flutter_bloc:
+  webviewx: ^0.2.2
 
 dev_dependencies:
   flutter_test:
