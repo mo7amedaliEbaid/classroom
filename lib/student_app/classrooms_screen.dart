@@ -1,4 +1,4 @@
-import 'package:classroom/student_app/studentreport_screen.dart';
+import 'package:classroom/common_screens/studentreport_screen.dart';
 import 'package:classroom/components.dart';
 import 'package:flutter/material.dart';
 

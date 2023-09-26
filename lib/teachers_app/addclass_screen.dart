@@ -1,15 +1,19 @@
-import 'package:classroom/utils/assets.dart';
-import 'package:classroom/components.dart';
-import 'package:classroom/utils/textstyles.dart';
+import 'package:classroom/common_screens/onboarding_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import '../utils/colors.dart';
+import '../components.dart';
 import '../utils/spaces.dart';
-import 'onboarding_screen.dart';
+import '../utils/textstyles.dart';
 
-class AccountScreen extends StatelessWidget {
-  const AccountScreen({super.key, required this.accountType});
-final String accountType;
+class AddClassScreen extends StatefulWidget {
+  const AddClassScreen({super.key});
+
+  @override
+  State<AddClassScreen> createState() => _AddClassScreenState();
+}
+
+class _AddClassScreenState extends State<AddClassScreen> {
   @override
   Widget build(BuildContext context) {
     double h = MediaQuery.sizeOf(context).height;
@@ -27,10 +31,7 @@ final String accountType;
               h * .05,
               w * .28),
           h4,
-          CircleAvatar(
-            foregroundImage: AssetImage(profileimage),
-            radius: 60,
-          ),
+          Icon(FontAwesomeIcons.schoolFlag),
           h1,
           ProfileContainer("First Name", "Mohamed", h, w * .6),
           h1,
@@ -38,9 +39,11 @@ final String accountType;
           h1,
           ProfileContainer("Email", "mo7amedaliebaid@gmail.com", h, w * .6),
           h1,
-          ProfileContainer("Account Type", accountType, h, w * .6),
-          SizedBox(height: h*.08,),
-          GreenButton("Change email", h*.06,w*.7),
+          ProfileContainer("Account Type", "", h, w * .6),
+          SizedBox(
+            height: h * .08,
+          ),
+          GreenButton("Change email", h * .06, w * .7),
           h2,
           GreenButton("Change Paasword", h * .06, w * .7),
           h2,
@@ -48,7 +51,7 @@ final String accountType;
               onTap: () {
                 Navigator.of(context).pushAndRemoveUntil(
                     MaterialPageRoute(builder: (context) => OnBoardingScreen()),
-                        (route) => false);
+                    (route) => false);
               },
               child: GreenButton("Singn Out", h * .06, w * .7)),
           h2,

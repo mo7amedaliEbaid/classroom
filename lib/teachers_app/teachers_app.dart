@@ -4,6 +4,7 @@ import 'package:classroom/components.dart';
 import 'package:classroom/student_app/student_emailscreen.dart';
 import 'package:classroom/student_app/student_settingsscreen.dart';
 import 'package:classroom/common_screens/account_screen.dart';
+import 'package:classroom/teachers_app/addclass_screen.dart';
 import 'package:classroom/teachers_app/teachers_mainscreen.dart';
 import 'package:classroom/utils/textstyles.dart';
 import 'package:flutter/material.dart';
@@ -122,18 +123,18 @@ class _TeacherAppState extends State<TeacherApp> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Icon(
-                            Icons.email,
+                            Icons.class_rounded,
                             color: Colors.white,
                             size: 40,
                           ),
                           //   h4,
                           Text(
-                            "Email",
+                            "Add",
                             style: hn2_white,
                           ),
                           //   h3,
                           Text(
-                            "Teacher",
+                            "Class",
                             style: hn2_white,
                           )
                         ],
@@ -150,7 +151,7 @@ class _TeacherAppState extends State<TeacherApp> {
           ? AccountScreen(accountType: 'Teacher',)
           : index == 2
           ? StudentSettingScreen()
-          : StudentEmailScreen(),
+          : AddClassScreen(),
     );
   }
 }

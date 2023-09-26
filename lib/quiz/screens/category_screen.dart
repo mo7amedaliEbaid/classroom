@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -6,7 +5,6 @@ import '../global/global_data.dart';
 import '../global/gradient_decoration.dart';
 import '../shared/card_category.dart';
 import 'login_screen.dart';
-
 
 class CategoryScreen extends StatelessWidget {
   const CategoryScreen({super.key});
@@ -75,7 +73,7 @@ class CategoryScreen extends StatelessWidget {
             child: Container(
               padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
               width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height *.82,
+              height: MediaQuery.of(context).size.height * .82,
               decoration: const BoxDecoration(
                 color: Color(0xFFE1F1FF),
                 borderRadius: BorderRadius.vertical(
