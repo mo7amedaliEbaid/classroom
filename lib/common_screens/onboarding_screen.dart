@@ -1,3 +1,4 @@
+import 'package:classroom/parent_app/parent_app.dart';
 import 'package:classroom/student_app/student_app.dart';
 import 'package:classroom/teachers_app/teachers_app.dart';
 import 'package:classroom/teachers_app/teachers_mainscreen.dart';
@@ -55,7 +56,10 @@ class OnBoardingScreen extends StatelessWidget {
             ),
             GreyDivider(),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                CommonSacafoldMessenger(context, "Welcome as a Parent");
+                NavigateTo(ParentApp(), context);
+              },
               child: CommonRow(
                   FontAwesomeIcons.peopleGroup, "Guardian / Parent", h * .07),
             ),

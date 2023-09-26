@@ -24,37 +24,23 @@ class _AddClassScreenState extends State<AddClassScreen> {
         children: [
           TopContainer(
               Text(
-                "My Account",
+                "Class Info",
                 style: hb3,
               ),
               context,
               h * .05,
               w * .28),
-          h4,
-          Icon(FontAwesomeIcons.schoolFlag),
-          h1,
-          ProfileContainer("First Name", "Mohamed", h, w * .6),
-          h1,
-          ProfileContainer("Last Name", "Ali", h, w * .6),
-          h1,
-          ProfileContainer("Email", "mo7amedaliebaid@gmail.com", h, w * .6),
-          h1,
-          ProfileContainer("Account Type", "", h, w * .6),
-          SizedBox(
-            height: h * .08,
-          ),
-          GreenButton("Change email", h * .06, w * .7),
           h2,
-          GreenButton("Change Paasword", h * .06, w * .7),
-          h2,
-          GestureDetector(
-              onTap: () {
-                Navigator.of(context).pushAndRemoveUntil(
-                    MaterialPageRoute(builder: (context) => OnBoardingScreen()),
-                    (route) => false);
-              },
-              child: GreenButton("Singn Out", h * .06, w * .7)),
-          h2,
+          Icon(Icons.school_rounded,size: 100,color: Colors.blue,),
+          h1,
+          h1,
+          ProfileContainer("Class Name", "Math", h, w * .6),
+          h1,
+          ProfileContainer("School Term", "2023 - 2024", h, w * .6),
+          h1,
+          ProfileContainer("Teacher Name", "Mohamed Ahmed", h, w * .6),
+          h1,
+          ProfileContainer("Description", "Optional", h, w * .6),
         ],
       ),
     );
