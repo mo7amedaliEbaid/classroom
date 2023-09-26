@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:classroom/paymob/modules/register/register.dart';
+import 'package:classroom/quiz/screens/login_screen.dart';
 import 'package:classroom/utils/colors.dart';
 import 'package:classroom/utils/spaces.dart';
 import 'package:classroom/utils/textstyles.dart';
@@ -111,8 +112,6 @@ Widget CommonRow(IconData icon, String text, double height,
   );
 }
 
-
-
 Widget GreyDivider() {
   return Divider(
     color: Colors.grey.shade800,
@@ -217,6 +216,26 @@ Widget BottomBar(double h, BuildContext context) {
         children: [
           GestureDetector(
             onTap: () {
+              NavigateTo(const LoginScreen(), context);
+            },
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  FontAwesomeIcons.quora,
+                  color: Colors.white,
+                  size: 30,
+                ),
+                Text(
+                  "Quiz",
+                  style: hn2_white,
+                )
+              ],
+            ),
+          ),
+          w1,
+          GestureDetector(
+            onTap: () {
               NavigateTo(RegisterScreen(), context);
             },
             child: Column(
@@ -234,7 +253,6 @@ Widget BottomBar(double h, BuildContext context) {
               ],
             ),
           ),
-          w1,
           w1,
           GestureDetector(
             onTap: () {
@@ -254,7 +272,6 @@ Widget BottomBar(double h, BuildContext context) {
               ],
             ),
           ),
-          w1,
           w1,
           Column(
             mainAxisAlignment: MainAxisAlignment.center,

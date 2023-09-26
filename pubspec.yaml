@@ -29,6 +29,10 @@ dependencies:
   flutter_bloc:
   webviewx: ^0.2.2
   google_maps_flutter:
+  flutter_timer_countdown:
+  google_fonts:
+  flutter_svg:
+  percent_indicator:
 
 dev_dependencies:
   flutter_test:

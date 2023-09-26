@@ -17,7 +17,7 @@ class _BehaviorScreenState extends State<BehaviorScreen> {
   // int pressedAttentionIndex = -1;
 
   TextEditingController _controller = TextEditingController();
-  String grade = "";
+  List<String> grades = ["95", "91", "85", "75", "79", "97", "98"];
 
   @override
   Widget build(BuildContext context) {
@@ -96,7 +96,7 @@ class _BehaviorScreenState extends State<BehaviorScreen> {
                             Container(
                               height: h * .03,
                               width: w * .1,
-                              padding: EdgeInsets.only(top: 8,left: 5),
+                              padding: EdgeInsets.only(top: 8, left: 5),
                               decoration: BoxDecoration(
                                   border: Border.all(
                                       color: Colors.black, width: 1)),
@@ -105,12 +105,11 @@ class _BehaviorScreenState extends State<BehaviorScreen> {
                                   controller: _controller,
                                   onSubmitted: (String value) {
                                     setState(() {
-                                      grade= _controller.text;
+                                      grades[index] = _controller.text;
                                     });
                                   },
-                                  decoration: InputDecoration(
-                                    hintText: grade
-                                  ),
+                                  decoration:
+                                      InputDecoration(hintText: grades[index]),
                                 ),
                               ),
                             ),
