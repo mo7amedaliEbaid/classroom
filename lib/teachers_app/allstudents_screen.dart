@@ -5,15 +5,13 @@ import 'package:classroom/utils/textstyles.dart';
 import 'package:flutter/material.dart';
 
 import '../utils/colors.dart';
+import '../utils/constants.dart';
 import '../utils/spaces.dart';
 
 class AllStudentsScreen extends StatelessWidget {
    AllStudentsScreen({super.key, required this.destination});
    final Widget destination;
 
-  final List<String> avatars=[avatar1,avatar2,avatar3,avatar4,avatar5,avatar6,avatar7];
-  final List<String> students=["Mohamed Ali","mo ali","Mo Khalil","Robert Bresson","Godard","Fav Student","Flutter Lover"];
-  final List<String> emails=["mo7amedaliebaid@gmail.com","mo@gmail.com","khalil@gmail.com","mahomoud@gmail.com","ali@gmail.com","avatar@gmail.com","godard@gmail.com"];
 
   @override
   Widget build(BuildContext context) {
@@ -56,7 +54,7 @@ class AllStudentsScreen extends StatelessWidget {
                         ],
                       ),
 
-                      Icon(Icons.arrow_forward_ios)
+                      Icon(Icons.arrow_forward_ios,color: deepgreen,)
                     ],
                     ),
                   ),

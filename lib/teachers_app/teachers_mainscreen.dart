@@ -1,12 +1,13 @@
 import 'dart:developer';
 
 import 'package:classroom/common_screens/account_screen.dart';
-import 'package:classroom/student_app/calender_screen.dart';
+import 'package:classroom/common_screens/calender_screen.dart';
 import 'package:classroom/student_app/classrooms_screen.dart';
 import 'package:classroom/common_screens/messages_screen.dart';
 import 'package:classroom/student_app/student_profilescreen.dart';
 import 'package:classroom/teachers_app/allstudents_screen.dart';
 import 'package:classroom/teachers_app/attendence_screen.dart';
+import 'package:classroom/teachers_app/behaviorpoints_screen.dart';
 import 'package:classroom/utils/assets.dart';
 import 'package:classroom/components.dart';
 import 'package:classroom/utils/textstyles.dart';
@@ -108,7 +109,9 @@ class _TeachersMainScreenState extends State<TeachersMainScreen> {
                   FontAwesomeIcons.fileCircleCheck, "Attendence", h * .06)),
           GreyDivider(),
           GestureDetector(
-            onTap: () {},
+            onTap: () {
+              NavigateTo(BehaviorScreen(), context);
+            },
             child: CommonRow(FontAwesomeIcons.personMilitaryPointing,
                 "Behavior Points", h * .06),
           ),
