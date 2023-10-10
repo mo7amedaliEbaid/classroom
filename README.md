@@ -1,5 +1,12 @@
 # classroom
-
+- Ui of a classroom management app plus some advanced features such as
+- barcode reader,
+- calender ,
+- generate and download pdf,
+- take and share screenshot,
+- Dummy quiz,
+- Google maps and
+- paymob integration  
 ## Youtube Demo Video 
 https://youtu.be/B4_Gnz6ooNA
 
