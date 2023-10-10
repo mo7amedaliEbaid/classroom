@@ -1,9 +1,7 @@
-## Not Finished
-### keep track of progress https://github.com/users/mo7amedaliEbaid/projects/2
-
 # classroom
 
-## Youtube Demo Video https://youtu.be/B4_Gnz6ooNA
+## Youtube Demo Video 
+https://youtu.be/B4_Gnz6ooNA
 
 <p float="left">
 
