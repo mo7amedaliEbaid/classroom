@@ -1,6 +1,6 @@
 # classroom
 
-the Ui of a classroom management app plus some cool features such as :
+the Ui of a classroom management app for teachers , students and parents plus some cool features such as :
 
 - Generate and download pdf (student report in this case)
 - Take and share screenshots
